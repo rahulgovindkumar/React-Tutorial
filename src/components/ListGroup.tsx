@@ -1,8 +1,10 @@
 import { useState } from "react";
 
-function ListGroup() {
-  let items = ["New york", "London", "Paris", "Tokyo", "Moscow"];
-
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
+function ListGroup({ items, heading }: ListGroupProps) {
   const [selectedItem, setSelectedItem] = useState(-1);
   return (
     <>
